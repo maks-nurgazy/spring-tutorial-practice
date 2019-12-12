@@ -27,6 +27,9 @@
 		  class="com.love.CricketCoach">
 		<property name="fortuneService"
 				  ref="myFortune"/>
+		<property name="emailAddress" value="maksatbek.bolushov@gmail.com"/>
+		<property name="team" value="Sunrisers Hyderabad"/>
+
 	</bean>
 
 
