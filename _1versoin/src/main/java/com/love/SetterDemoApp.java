@@ -11,6 +11,9 @@ public class SetterDemoApp
 
         CricketCoach theCoach = context.getBean("myCricketCoach",CricketCoach.class);
 
+        BadFortuneService coach = context.getBean("badFortune",BadFortuneService.class);
+        System.out.println(coach.getFortune());
+
         System.out.println(theCoach.getDailyWorkOut());
         System.out.println(theCoach.getDailyFortune());
 
