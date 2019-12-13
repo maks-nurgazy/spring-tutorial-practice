@@ -1,4 +1,4 @@
-package com.love;
+package com.love.coach;
 
 public interface Coach
 {

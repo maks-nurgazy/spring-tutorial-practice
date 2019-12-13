@@ -1,4 +1,4 @@
-package com.love;
+package com.love.service;
 
 public interface FortuneService
 {
