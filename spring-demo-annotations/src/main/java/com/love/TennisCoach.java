@@ -8,10 +8,21 @@ public class TennisCoach implements Coach
 {
     private FortuneService fortuneService;
 
-    //@Autowired this is an spring 4.3 feature it works
-    TennisCoach(FortuneService theFortuneService)
+    TennisCoach()
     {
-        fortuneService = theFortuneService;
+        System.out.println("inside tennis def cons package private");
+    }
+
+    //@Autowired this is an spring 4.3 feature it works
+//    TennisCoach(FortuneService theFortuneService)
+//    {
+//        fortuneService = theFortuneService;
+//    }
+
+    @Autowired
+    public void setFortuneService(FortuneService fortuneService) {
+        System.out.println("Autowired is setting fortuneService");
+        this.fortuneService = fortuneService;
     }
 
     @Override
