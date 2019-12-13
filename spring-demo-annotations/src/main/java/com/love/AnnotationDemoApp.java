@@ -1,20 +1,20 @@
 package com.love;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.w3c.dom.ls.LSOutput;
 
-public class AnnotationDemoApp
-{
-    public static void main(String[] args)
-    {
+
+public class AnnotationDemoApp {
+
+    public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-            new ClassPathXmlApplicationContext("applicationContext.xml");
+                new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach coach = context.getBean("tennisCoach",Coach.class);
+        Coach coach = context.getBean("swimCoach", Coach.class);
 
-        System.out.println(coach.getDailyWorkout());
+        Coach secondCoach = context.getBean("swimCoach", Coach.class);
 
-        System.out.println(coach.getDailyFortune());
+        boolean result = (coach == secondCoach);
+        System.out.println("pointing to the same object " + result);
 
         context.close();
 
