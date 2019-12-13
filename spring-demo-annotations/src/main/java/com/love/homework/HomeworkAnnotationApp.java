@@ -1,20 +1,18 @@
-package com.love;
+package com.love.homework;
 
+import com.love.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.w3c.dom.ls.LSOutput;
 
-public class AnnotationDemoApp
+public class HomeworkAnnotationApp
 {
     public static void main(String[] args)
     {
         ClassPathXmlApplicationContext context =
             new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach coach = context.getBean("tennisCoach",Coach.class);
+        Coach coach = context.getBean("footballCoach",Coach.class);
 
         System.out.println(coach.getDailyWorkout());
-
-        System.out.println(coach.getDailyFortune());
 
         context.close();
 
