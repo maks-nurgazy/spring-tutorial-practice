@@ -6,9 +6,11 @@ import com.love.service.BadFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("com.love.logger")
+@PropertySource("classpath:sport.properties")
 public class SportConfig {
 
     @Bean
