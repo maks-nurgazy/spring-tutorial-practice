@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form action="processForm" method="get">
+    <form action="getMessage" method="get">
         <input type="text" name="studentName"
             placeholder="What's your name?"/>
         <input type="submit"/>
