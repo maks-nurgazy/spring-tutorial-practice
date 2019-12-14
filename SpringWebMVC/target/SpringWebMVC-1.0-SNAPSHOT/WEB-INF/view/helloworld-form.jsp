@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form action="getMessage" method="get">
+    <form action="secondMessage" method="get">
         <input type="text" name="studentName"
             placeholder="What's your name?"/>
         <input type="submit"/>
