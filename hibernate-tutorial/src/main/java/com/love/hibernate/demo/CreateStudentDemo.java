@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
+
 public class CreateStudentDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
@@ -15,12 +17,18 @@ public class CreateStudentDemo {
         Session session = factory.getCurrentSession();
 
         try {
-            Student maks = new Student("Maksatbek","Bolushov","maksatbek.bolushov@gmail.com");
+            Student maks = new Student("Samat","Kurmanbekov","samatos@gmail.com");
             session.beginTransaction();
-            session.save(maks);
+
+            @SuppressWarnings("unchecked")
+            List<Student> students = session.createQuery("from Student").list();
+
+            for(Student temp : students)
+            {
+                System.out.println(temp);
+            }
 
             session.getTransaction().commit();
-            System.out.println("Saved ....");
 
         }finally {
             session.close();
