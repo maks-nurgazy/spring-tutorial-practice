@@ -23,7 +23,7 @@
 	<mvc:annotation-driven/>
 
 	<util:properties id="countryOptions"
-					 location="/resources/countries.properties"/>
+					 location="resources/countries.properties"/>
 
 	<!-- Step 5: Define Spring MVC view resolver -->
 	<bean
@@ -32,7 +32,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<mvc:resources mapping="resources/**" location="resources/"/>
+	<mvc:resources mapping="resources/**" location="resources"/>
 
 </beans>
 

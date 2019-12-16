@@ -1,8 +1,14 @@
 package com.love.entity;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student
 {
     private String firstName;
+
+    @NotNull(message = "is required")
+    @Size(min=1,message = "is required")
     private String lastName;
     private String country;
     private String favoriteLanguage;

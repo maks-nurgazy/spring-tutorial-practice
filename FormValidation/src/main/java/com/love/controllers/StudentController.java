@@ -4,9 +4,11 @@ import com.love.entity.Student;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @Controller
@@ -25,8 +27,12 @@ public class StudentController
         return "student-form";
     }
     @RequestMapping("/processFrom")
-    public String processForm(@ModelAttribute("student")Student theStudent)
+    public String processForm(@Valid @ModelAttribute("student")Student theStudent, BindingResult result)
     {
+        if(result.hasErrors())
+        {
+            return "student-form";
+        }
         return "student-confirmation";
     }
 

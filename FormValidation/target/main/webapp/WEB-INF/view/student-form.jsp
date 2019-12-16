@@ -12,10 +12,13 @@
 </head>
 <body>
 
+    ${pageContext.request.contextPath}
+
     <form:form action="processFrom" modelAttribute="student">
         First name: <form:input path="firstName"/>
         <br><br>
         Last name: <form:input path="lastName"/>
+        <form:errors path="lastName" cssClass="error"/>
         <br><br>
 
         <form:select path="country">
