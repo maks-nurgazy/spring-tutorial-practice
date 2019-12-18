@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hb-01-one-to-one-uni@localhost" uuid="5fd7ead3-332f-4f3d-8949-82c9e3369986">
+    <data-source source="LOCAL" name="onetomany" uuid="8711409b-2b47-4b5b-a140-52188f6316dd">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/hb-01-one-to-one-uni?useSSL=false</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/hb-03-one-to-many</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
